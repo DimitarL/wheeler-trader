@@ -4,7 +4,7 @@ The end users of the Wheeler Trader application are the workers in car showrooms
 
 What can be done through the application is to display all vehicles, vehicles for sale only, for rent only, as well as vehicles that are neither for sale nor for rent. From the sections "All Vehicles" and "Unassigned Vehicles" we can add a new vehicle, and from "Sale" and "Rent" we can set a vehicle for sale or rent. Each section supports entity filtering, updating and deleting entities.
 
-<br/><br/><br/><br/>
+<br/><br/><br/>
 
 ![image](https://user-images.githubusercontent.com/36930531/172374318-21d8bf13-1702-400a-8d0c-1c7175fb2ef2.png)
 <br/><br/>
