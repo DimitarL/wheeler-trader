@@ -8,16 +8,16 @@ What can be done through the application is to display all vehicles, vehicles fo
 ## How to run
 
 Docker Desktop is required to run the application. Execute the following commands:
-	- docker pull postgres:14.3			(download prebuilt postgres image)
-	- docker run -d -e POSTGRES_PASSWORD=postgres --name wheeler-trader_postgres postgres:14.3	(start a container using the postgres image)
-	- docker inspect wheeler-trader_postgres	(get the IP of the container "NetworkSettings" -> "IPAddress" -> "172.17.0.2" (example value))
-	- cd wheeler-trader/migrations
-	- docker build . -t wheeler-trader_migrator	(build db schema migrator image)
-	- docker run -e APP_POSTGRES_URI="postgres://postgres:postgres@172.17.0.2:5432/postgres?sslmode=disable" wheeler-trader_migrator:latest
+- docker pull postgres:14.3			(download prebuilt postgres image)
+- docker run -d -e POSTGRES_PASSWORD=postgres --name wheeler-trader_postgres postgres:14.3	(start a container using the postgres image)
+- docker inspect wheeler-trader_postgres	(get the IP of the container "NetworkSettings" -> "IPAddress" -> "172.17.0.2" (example value))
+- cd wheeler-trader/migrations
+- docker build . -t wheeler-trader_migrator	(build db schema migrator image)
+- docker run -e APP_POSTGRES_URI="postgres://postgres:postgres@172.17.0.2:5432/postgres?sslmode=disable" wheeler-trader_migrator:latest
 		(start a container with the migrator image that will create the database tables)
-	- cd ..
-	- docker build . -t wheeler-trader_app		(build application image)
-	- docker run -d -p 8080:8080 -e APP_POSTGRES_URI="postgres://postgres:postgres@172.17.0.2:5432/postgres" --name wheeler-trader_app wheeler-trader_app:latest
+- cd ..
+- docker build . -t wheeler-trader_app		(build application image)
+- docker run -d -p 8080:8080 -e APP_POSTGRES_URI="postgres://postgres:postgres@172.17.0.2:5432/postgres" --name wheeler-trader_app wheeler-trader_app:latest
 		(start a container with the application, the application could be requested on localhost 8080)
 
 
