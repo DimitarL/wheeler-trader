@@ -1,0 +1,639 @@
+{
+	"info": {
+		"_postman_id": "74bc3263-3cf8-48cc-9f40-0a032303b5bb",
+		"name": "wheeler-trader",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "vehicle",
+			"item": [
+				{
+					"name": "Vehicles List",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"car\",\n  \"make\": \"Toyota\",\n  \"model\": \"Yaris\",\n  \"horsePower\": 78\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicles Get",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicle/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/vehicle/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"car\",\n  \"make\": \"Subaru\",\n  \"model\": \"WRX\",\n  \"horsePower\": 170\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicle/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rent",
+			"item": [
+				{
+					"name": "Rent List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rent Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rent/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rent",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rent Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"daily_price\": 30,\n    \"weekly_price\": 120,\n    \"monthly_price\": 390\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rent/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rent",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rent Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicle_id\": 3,\n    \"daily_price\": 23,\n    \"weekly_price\": 120,\n    \"monthly_price\": 350\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rent Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rent/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rent",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rent Get With Filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rent?type=truck&make=MAN&model=TGX&minHP=300&maxHP=400&minDP=20&maxDP=30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rent"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "truck"
+								},
+								{
+									"key": "make",
+									"value": "MAN"
+								},
+								{
+									"key": "model",
+									"value": "TGX"
+								},
+								{
+									"key": "minHP",
+									"value": "300"
+								},
+								{
+									"key": "maxHP",
+									"value": "400"
+								},
+								{
+									"key": "minDP",
+									"value": "20"
+								},
+								{
+									"key": "maxDP",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sale",
+			"item": [
+				{
+					"name": "Sales List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sale",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sale Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sale/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sale Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price\": 35000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sale/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sale Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicle_id\": 5,\n    \"price\": 34000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sale",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sale Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sale/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sale Get With Filters",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicle_id\": 17,\n    \"daily_price\": 300,\n    \"weekly_price\": 3000,\n    \"monthly_price\": 3000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sale?type=car&make=Subaru&model=WRX&minHP=118&maxHP=170&minPrice=30000&maxPrice=35000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "car"
+								},
+								{
+									"key": "make",
+									"value": "Subaru"
+								},
+								{
+									"key": "model",
+									"value": "WRX"
+								},
+								{
+									"key": "minHP",
+									"value": "118"
+								},
+								{
+									"key": "maxHP",
+									"value": "170"
+								},
+								{
+									"key": "minPrice",
+									"value": "30000"
+								},
+								{
+									"key": "maxPrice",
+									"value": "35000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inventory",
+			"item": [
+				{
+					"name": "Inventory List All No Filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inventory/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inventory",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inventory List All With Filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inventory/all?type=truck&make=MAN&minPrice=25000&maxPrice=31000&minWP=100&maxMP=600",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inventory",
+								"all"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "truck"
+								},
+								{
+									"key": "make",
+									"value": "MAN"
+								},
+								{
+									"key": "minPrice",
+									"value": "25000"
+								},
+								{
+									"key": "maxPrice",
+									"value": "31000"
+								},
+								{
+									"key": "minWP",
+									"value": "100"
+								},
+								{
+									"key": "maxMP",
+									"value": "600"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inventory List Unassigned",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inventory/unassigned",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inventory",
+								"unassigned"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inventory Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inventory/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inventory",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
